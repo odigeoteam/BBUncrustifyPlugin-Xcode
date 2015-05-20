@@ -156,11 +156,13 @@ static XCFPlugin *sharedPlugin = nil;
 		[menuItem setTarget:self];
 		[formatCodeMenu addItem:menuItem];
 		
-		menuItem = [[NSMenuItem alloc] initWithTitle:@"Format Active File" action:@selector(formatActiveFile:) keyEquivalent:@""];
+		menuItem = [[NSMenuItem alloc] initWithTitle:@"Format Active File" action:@selector(formatActiveFile:) keyEquivalent:@"U"];
+		[menuItem setKeyEquivalentModifierMask:NSControlKeyMask];
 		[menuItem setTarget:self];
 		[formatCodeMenu addItem:menuItem];
 		
-		menuItem = [[NSMenuItem alloc] initWithTitle:@"Format Selected Lines" action:@selector(formatSelectedLines:) keyEquivalent:@""];
+		menuItem = [[NSMenuItem alloc] initWithTitle:@"Format Selected Lines" action:@selector(formatSelectedLines:) keyEquivalent:@"u"];
+		[menuItem setKeyEquivalentModifierMask:NSControlKeyMask];
 		[menuItem setTarget:self];
 		[formatCodeMenu addItem:menuItem];
 		
